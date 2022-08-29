@@ -6,19 +6,8 @@ module.exports = sequelize => {
         id: {
             type: DataTypes.UUID,
             defaultValue: DataTypes.UUIDV4,
-            // type:DataTypes.INTEGER,
-            // autoIncrement:true,
             primaryKey: true,
-            // get(){
-            //     return `${this.getDataValue('id')}db`
-            // }
         },
-        // code:{
-        //     type:DataTypes.VIRTUAL,
-        //     get(){
-        //         return `${this.id}db`
-        //     }
-        // },
         name: {
             type: DataTypes.STRING,
             allowNull: false,
