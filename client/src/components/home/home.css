@@ -1,0 +1,48 @@
+.home{
+    background-color: rgb(56, 150, 188);
+    /* min-height: 800px;
+    max-height: 2000px;
+    width: 100%; */
+    /* position: fixed; */
+    /* width: 100%;
+    min-height:125vh;
+    background-size: cover;  */
+    min-height: 100vh;
+}
+
+.home button{
+    margin-left: 0;
+}
+
+.home .inputSelect{
+    margin: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home select{
+    height: 40px;
+    margin-top: 1.5%;
+}
+
+.home input {
+    background-color: #212121;
+    max-width: 190px;
+    height: 15px;
+    padding: 10px;
+    /* text-align: center; */
+    border: 2px solid white;
+    border-radius: 5px;
+    /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
+  }
+  
+   .home input:focus {
+    color: white;
+    background-color: #212121;
+    outline-color: #FBCA1F;
+    box-shadow: -3px -3px 15px #FBCA1F;
+    transition: .1s;
+    transition-property: box-shadow;
+  }

@@ -1,0 +1,5 @@
+.breedList{
+    display: grid;
+    grid-template-areas: 'auto auto auto auto';
+    margin-left: 5%;
+}
