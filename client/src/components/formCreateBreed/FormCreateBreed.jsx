@@ -63,14 +63,6 @@ export function validate(input) {
 };
 
 export default function FormCreateBreed() {
-    const [name, setName] = useState()
-    const [minHeight, setMinHeight] = useState()
-    const [maxHeight, setMaxHeight] = useState()
-    const [minWeight, setMinWeight] = useState()
-    const [maxWeight, setMaxWeight] = useState()
-    const [startLifeSpan, setStartLifeSpan] = useState()
-    const [endLifeSpan, setEndLifeSpan] = useState()
-    const [image, setImage] = useState()
     const temperaments = useSelector((state) => state.temperaments)
     const [selectTemperament, setSelectTemperament] = useState([]);
     const [errors, setErrors] = React.useState({});
@@ -211,11 +203,11 @@ export default function FormCreateBreed() {
                 </div>
             </div>
             <div className='buttonsForm'>
-            <Link to='/breeds'>
-                <Button text={'Go Back'} />
-            </Link>
-            <Button text={'Create breed'} onClick={() => handleOnClick()} />
-</div>
+                <Link to='/breeds'>
+                    <Button text={'Go Back'} />
+                </Link>
+                <Button text={'Create breed'} onClick={() => handleOnClick()} />
+            </div>
         </div>
     )
 }
