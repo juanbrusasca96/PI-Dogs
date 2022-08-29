@@ -7,9 +7,6 @@ export const GET_ALL_BREEDS = 'GET_ALL_BREEDS'
 export const GET_BREED_BY_NAME = 'GET_BREED_BY_NAME'
 export const GET_ALL_TEMPERAMENTS = 'GET_ALL_TEMPERAMENTS'
 export const FILTER_BREEDS_BY_TEMPERAMENT = 'FILTER_BREEDS_BY_TEMPERAMENT'
-// export const FILTER_BREEDS_BY_API_DB = 'FILTER_BREEDS_BY_API_DB'
-// export const GET_ALL_BREEDS_FROM_DB = 'GET_ALL_BREEDS_FROM_DB'
-// export const GET_ALL_BREEDS_FROM_API = 'GET_ALL_BREEDS_FROM_API'
 export const SORT_BY_NAME = 'SORT_BY_NAME'
 export const SORT_BY_WEIGHT = 'SORT_BY_WEIGHT'
 export const SORT_BY_DB_FIRST = 'SORT_BY_DB_FIRST'
@@ -98,22 +95,3 @@ export const sort = (value, ascDes) => {
         type: SORT_BY_DB_FIRST
     }
 }
-
-// export const filterBreedsByApiDb = (apiDb) => {
-//     return {
-//         type: FILTER_BREEDS_BY_API_DB,
-//         payload: apiDb
-//     }
-// }
-
-// export const getAllBreedsFromDB = () => {
-//     return function (dispatch) {
-//         return fetch(`http://localhost:3001/dogs`).then(res => res.json()).then(res => { dispatch({ type: GET_ALL_BREEDS_FROM_DB, payload: res }) }).catch(err => console.log(err))
-//     }
-// }
-
-// export const getAllBreedsFromAPI = () => {
-//     return function (dispatch) {
-//         return fetch(`https://api.thedogapi.com/v1/breeds?api_key=${REACT_APP_YOUR_API_KEY}`).then(res => res.json()).then(res => { dispatch({ type: GET_ALL_BREEDS_FROM_API, payload: res }) }).catch(err => console.log(err))
-//     }
-// }
