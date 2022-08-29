@@ -4,12 +4,8 @@ import './breedCard.css'
 export default function BreedCard({ breed }) {
 
   return (
-    // <div>
-    //   {breed.name} - {breed.minWeight} - {breed.maxWeight}
-    // </div>
 
     <div className="card">
-      {/* <div className="card-image"></div> */}
       <img className='card-image' src={breed.image} alt="" />
       <div className="heading">
         <h3>{breed.name}</h3>
