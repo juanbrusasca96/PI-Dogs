@@ -33,7 +33,6 @@ router.get('/dogs/name', async (req, res) => {
             },
             include: Temperament
         })
-        // return dogs.length === 0 ? res.status(404).send('No se encontro ninguna raza') : 
         return res.json(dogs)
     } catch (error) {
         return res.status(404).send(`Hubo un error, ${error}`)
