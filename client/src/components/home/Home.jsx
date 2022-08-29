@@ -20,16 +20,6 @@ export default function Home() {
 
     useEffect(() => {
         input ? dispatch(actions.getBreedsByName(input, selectApiDb)) : dispatch(actions.getAllBreeds(selectApiDb))
-        // if (input) {
-        //     dispatch(actions.getBreedsByName(input))
-
-        // }
-        // else{
-        //     dispatch(actions.getAllBreeds())
-        // }
-        // console.log(breeds);
-        // console.log(breedsFilter);
-        // dispatch(actions.filterBreedsByTemperament(selectTemperament))
         dispatch(actions.getAllTemperaments())
     }, [input, selectApiDb, dispatch])
 
@@ -40,18 +30,6 @@ export default function Home() {
     useEffect(() => {
         dispatch(actions.filterBreedsByTemperament(selectTemperament))
     }, [breeds, selectTemperament])
-
-    // useEffect(() => {
-    //     if (selectApiDb === 'All') {
-    //         dispatch(actions.getAllBreeds())
-    //     }
-    //     else if (selectApiDb === 'API') {
-    //         dispatch(actions.getAllBreedsFromAPI())
-    //     }
-    //     else if (selectApiDb === 'DB') {
-    //         dispatch(actions.getAllBreedsFromDB())
-    //     }
-    // }, [selectApiDb])
 
     useEffect(() => {
         if (flag && breeds.length !== 0) {
@@ -74,7 +52,6 @@ export default function Home() {
         }
     }, [breeds, flag])
 
-    console.log(breeds);
     return (
         <div className='home'>
             <Link to='/form'>
@@ -92,7 +69,6 @@ export default function Home() {
 
                 <select onChange={(e) => {
                     setSelectApiDb(e.target.value)
-                    // dispatch(actions.getAllBreeds(e.target.value))
                 }}>
                     <option value='All'>All</option>
                     <option value='API'>API</option>
