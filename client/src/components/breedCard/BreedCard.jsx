@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './breedCard.css'
 
 export default function BreedCard({ breed }) {
@@ -8,7 +9,9 @@ export default function BreedCard({ breed }) {
     <div className="card">
       <img className='card-image' src={breed.image} alt="" />
       <div className="heading">
-        <h3>{breed.name}</h3>
+        <Link to={`/detail/${breed.id}`} style={{ textDecoration: 'none' }}>
+          <h3>{breed.name}</h3>
+        </Link>
         <div>
           {typeof breed.id === 'number' ?
             breed.temperament :

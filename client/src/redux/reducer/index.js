@@ -1,8 +1,9 @@
-import { FILTER_BREEDS_BY_TEMPERAMENT, GET_ALL_BREEDS, GET_ALL_TEMPERAMENTS, GET_BREED_BY_NAME, SORT_BY_DB_FIRST, SORT_BY_NAME, SORT_BY_WEIGHT } from "../actions"
+import { FILTER_BREEDS_BY_TEMPERAMENT, GET_ALL_BREEDS, GET_ALL_TEMPERAMENTS, GET_BREED_BY_NAME, GET_BREED_DETAIL, SORT_BY_DB_FIRST, SORT_BY_NAME, SORT_BY_WEIGHT } from "../actions"
 
 
 const initialState = {
     breeds: [],
+    breedDetail:{},
     breedsFilter: [],
     temperaments: []
 }
@@ -44,6 +45,11 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 breeds: state.breeds.filter(breed => typeof breed.id === 'string').concat(state.breeds.filter(breed => typeof breed.id === 'number'))
             }
+            case GET_BREED_DETAIL:
+                return{
+                    ...state,
+                    breedDetail: action.payload[0]
+                }
         default:
             return state;
     }

@@ -1,0 +1,19 @@
+.breedDetail {
+    -webkit-box-shadow: inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    margin: 3%;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: rgb(211, 211, 211);
+}
+
+.breedDetail img {
+    width: 35vw;
+    height: 45vh;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+
+.breedDetail button{
+    margin: 0;
+}

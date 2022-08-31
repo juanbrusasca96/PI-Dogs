@@ -10,6 +10,7 @@ export const FILTER_BREEDS_BY_TEMPERAMENT = 'FILTER_BREEDS_BY_TEMPERAMENT'
 export const SORT_BY_NAME = 'SORT_BY_NAME'
 export const SORT_BY_WEIGHT = 'SORT_BY_WEIGHT'
 export const SORT_BY_DB_FIRST = 'SORT_BY_DB_FIRST'
+export const GET_BREED_DETAIL = 'GET_BREED_DETAIL'
 
 function mapFromApi(array) {
     return array.map(breed => ({
@@ -93,5 +94,18 @@ export const sort = (value, ascDes) => {
     }
     return {
         type: SORT_BY_DB_FIRST
+    }
+}
+
+export const getBreedDetail = (id) => {
+    if (id>0) {
+        return function (dispatch) {
+            return fetch(`https://api.thedogapi.com/v1/breeds?api_key=${REACT_APP_YOUR_API_KEY}`).then(res => res.json()).then(res => { dispatch({ type: GET_BREED_DETAIL, payload: mapFromApi(res.filter(breed =>breed.id == id)) }) }).catch(err => console.log(err))
+        }
+    }
+    else {
+        return function (dispatch) {
+            return fetch(`http://localhost:3001/dogs/${id}`).then(res => res.json()).then(res => { dispatch({ type: GET_BREED_DETAIL, payload: [res] }) }).catch(err => console.log(err))
+        }
     }
 }
